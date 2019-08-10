@@ -24,7 +24,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
     try {
         const { id } = req.params;
-        const fruit = await db('cars').where({ id });
+        const car = await db('cars').where({ id });
 
         res.json(car);
     } catch (err) {
